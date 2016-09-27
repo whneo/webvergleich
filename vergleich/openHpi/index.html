@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en"><head><script>
+//<![CDATA[
+window.gon={};gon.in_app=false;
+//]]>
+</script><script type="text/javascript">(function (document, navigator, standalone) {
+  // see https://gist.github.com/irae/1042167
+  // prevents links from apps from oppening in mobile safari
+  // this javascript must be the first script in your <head>
+  if ((standalone in navigator) && navigator[standalone]) {
+          var curnode, location = document.location, stop = /^(a|html)$/i;
+          document.addEventListener('click', function (e) {
+            curnode = e.target;
+            while (!(stop).test(curnode.nodeName)) {
+              curnode = curnode.parentNode;
+            }
+            // Condidions to do this only on links to your own app
+            // if you want all links, use if('href' in curnode) instead.
+            if (
+                    'href' in curnode && // is a link
+                    (chref = curnode.href).replace(location.href, '').indexOf('#') && // is not an anchor
+                    (  !(/^[a-z\+\.\-]+:/i).test(chref) ||                       // either does not have a proper scheme (relative links)
+                    chref.indexOf(location.protocol + '//' + location.host) === 0 ) // or is in the same protocol and domain
+            ) {
+              e.preventDefault();
+              location.href = curnode.href;
+            }
+          }, false);
+  }
+  })(document, window.navigator, 'standalone');</script><meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" name="viewport" /><meta charset="utf-8" /><meta content="nHh1Z--8CnZ0ae3es3rPl8f9ScyVl2iMhoKcskRN3Z4" name="google-site-verification" /><meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="EvGlJSxlt+Q8kOwGSkeX19ep1+Ax3DLz3XbyYJWMqkI/JrKpG0GhLOX24ZWbIneMlG3hy21Z8juinjO0RnZByA==" /><title>Courses | openHPI</title><link href="/img/favicon/openhpi_favicon.ico" rel="SHORTCUT ICON" /><link href="/web_manifest.json" rel="manifest" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="openHPI" name="apple-mobile-web-app-title" /><link href="/assets/openHPI/icons/opaque/openhpi-icon-96x96-f06a998a997cd989392c3dda86df41ff3c47ad165359855ac43594f20c3bdbaf.png" rel="apple-touch-icon" sizes="96x96" /><link href="/assets/openHPI/icons/opaque/openhpi-icon-512x512-c714c82360f1f9e560160f8ea4825a2d66f2dcf396acc198d4d9706f37d77361.png" rel="apple-touch-icon" sizes="512x512" /><link href="/assets/openHPI/icons/opaque/openhpi-icon-168x168-ad7fb451e7485caa5658d2e0171a38c89704f14f76558d8390d68cd981b03700.png" rel="apple-touch-icon" sizes="168x168" /><link href="/assets/openHPI/icons/opaque/openhpi-icon-192x192-e275cf204f870de13d1ddbd8045b14be4ed5d0a1f7b44fe7ced10354511e6c0f.png" rel="apple-touch-icon" sizes="192x192" /><link href="/assets/openHPI/icons/opaque/openhpi-icon-144x144-5427431b8ec073dc4cc32428bd72fb30a4292eccde38d4284807eb4d12d00f91.png" rel="apple-touch-icon" sizes="144x144" /><link href="/assets/openHPI/icons/opaque/openhpi-icon-256x256-25e792d59f59dbd1b9231c5dec6395e2c1b8eaf161d90af73c82811e88b9f260.png" rel="apple-touch-icon" sizes="256x256" /><link rel="stylesheet" media="all" href="/assets/bootstrap-77b62ea1d20b915f9bf51986bc458f0f10c06ded105f2c49a74ad6a59bef5f73.css" /><link rel="stylesheet" media="all" href="/assets/application_openhpi-8630920ac40fc087ff7030bcba828b40682a05c2560b440b00ba9e59ccd9a53d.css" /><script src="/assets/application-bd4de9ef13b3542621863c22443b057bea2aab569c6ec3fed9efdac6ae300eef.js"></script><script src="/assets/languages/jquery.validationEngine-en-6352db92bf85bb64b465c08d00d489a8a0e65f7022181488d9687977f0ce40be.js"></script><script>
+//<![CDATA[
+jQuery.timeago.settings.lang="en";
+//]]>
+</script><script type="text/javascript">I18n.defaultLocale = "en";
+I18n.locale = "en";
+I18n.brand = "openhpi";</script><style type="text/css"></style><script src="/assets/vendor-0f09ab01b9972e515dc39b64a6c222ff2a2f23e585579b68de15be9a8d320e5c.js"></script><script src="/assets/xikolo-frontend-55a7ace02bc51833efc6ca27b1858f15f439b71a76a745ce607892b3aeb46534.js"></script><link rel="stylesheet" media="screen" href="/assets/vendor-c3713ff75439e0636c36fcc940ec75810cc5a934bb43c11dc7b97e4c4403bab7.css" /><link rel="stylesheet" media="screen" href="/assets/xikolo-frontend-279ce3fa8dabba7386294802ed5e14caaea710ecc7c28dea0c5fa9deec44a0f9.css" /><meta content="{&quot;site_name&quot;:&quot;openHPI&quot;,&quot;ui_primary_color&quot;:&quot;#de6212&quot;,&quot;on_demand&quot;:false}" name="site-config" /><meta content="[&quot;mammooc_rating_widget&quot;]" name="enabled-features" /></head><body class="openhpi course-courses-controller index-action   " data-images-url="" data-offset="150" data-sitename="openHPI" data-spy="scroll" data-target=".scrollspy-target"><div class="header clearfix hidden-xs"><div class="container"><div class="brand"><a href="https://hpi.de/" target="_blank" title="HPI Homepage"><img src="/assets/hpi-claim_01-0334077b2c79347e5f1330cd00ad54a84e501d28c0c3fec55081181ac7d14bee.png" alt="Hpi claim 01" /></a></div><div class="slogan">Design IT. Create Knowledge.</div></div></div><nav class="navbar navbar-inverse hidden-print" role="navigation"><div class="container"><div class="navbar-header"><button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/"><img alt="Logo" id="welcome01" src="/assets/logo_openhpi-155a11eefd46841c38fb009a2d9b84d28550a0c920fbf50b591b3aa1f7c0190c.png" /></a><div class="dropdown pull-right"><ul class="dropdown-menu" role="menu"><li class="flag flag-de"></li><li class="flag flag-uk"></li></ul></div></div><div class="collapse navbar-collapse navbar-ex1-collapse"><ul class="nav navbar-nav navbar-right"><li><a href="/pages/about">About openHPI</a></li><li class="active" id="navcourses"><a href="/courses">Courses</a></li><li><a href="/news">News</a></li><li class="dropdown dropdown-arrow visible-md visible-lg visible-sm"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="xikolo-icon icon-language ml5 vmiddle"></span><span class="vmiddle ml5">English</span><span class="caret vmiddle"></span></a><ul aria-labelledby="languageChooser" class="dropdown-menu" role="menu"><li class="active"><a href="/courses?locale=en">English</a></li><li><a href="/courses?locale=de">Deutsch</a></li><li><a href="/courses?locale=cn">中文</a></li><li class="divider"></li><li><a href="https://openhpi.cn" target="_blank">中文</a></li></ul></li><li class="visible-xs"><div><span class="vmiddle white"></span><ul class="list-inline inline-block vmiddle"><li class="active"><a href="/courses?locale=en">English</a></li><li><a href="/courses?locale=de">Deutsch</a></li><li><a href="/courses?locale=cn">中文</a></li><li><a href="https://openhpi.cn" target="_blank">中文</a></li></ul></div></li><li class="dropdown dropdown-arrow invisible-to-md"><a class="dropdown-toggle js-login" data-toggle="dropdown" href="#" id="js-login-toggle">Log in<span class="caret"></span></a><ul class="dropdown-menu login-dropdown pb10"><div class="row" id="login-form"><div class="col-md-12"><h4>Log in with credentials</h4><div class="identity"><form class="simple_form login" action="https://open.hpi.de/sessions" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="TaSVE68e6T/BZN7zTm40XbGA2ZOHCx8XE6UXLGWdkbFgc4KfmDr/9xgC02CfC9QG8kTvuNuO399sTdb4tmd6Ow==" /><div class="login"><div class="login_error"></div><div class="form-group email required login_email"><label class="email required" for="login_email"><abbr title="required">*</abbr> E-mail</label><div><div><input class="string email required form-control form-control" required="required" aria-required="true" placeholder="E-mail" type="email" name="login[email]" id="login_email" /></div></div></div><div style="margin-bottom:0px" class="form-group password required login_password"><label class="password required" for="login_password"><abbr title="required">*</abbr> Password</label><div><div><input class="password required form-control" required="required" aria-required="true" placeholder="Password" type="password" name="login[password]" id="login_password" /></div></div></div><a class="small" href="/account/reset/new">Forgot your password?</a><div class="buttons has-spinner"><input type="submit" name="commit" value="Log in" class="btn btn-primary btn js-submit btn btn-primary full-width has-spinner" id="login" data-inactive-text="Loading ..." /></div></div></form></div><hr class="divider" /><h4>New here?</h4><a class="js-register btn btn-default full-width" href="/account/new">Create new account</a></div></div></ul></li><li class="visible-to-md"><a href="/sessions/new">Log in</a></li></ul></div></div></nav><div class="wrapper"><div class="container"><noscript><div class="alert alert-warning-border mt10"><span class="xikolo-icon icon-warning mr10"></span><span class="ml5 kill-underline-force"><a target="_blank" href="http://www.enable-javascript.com/">Please enable Javascript in your browser!!</a></span></div></noscript></div><div class="course-list"><div id="ember-app-container"></div></div><div aria-labelledby="enrollmentPolicyLabel" class="modal fade" id="enrollmentPolicyModal" role="dialog" tabindex="-1"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="enrollmentPolicyModalLabel">Enroll for<span class="ml5 primary-color" id="courseTitle"></span></h4></div><div class="modal-body"><div class="row"><div class="col-md-12"><p>Before you can be enrolled to the course, you need to agree with the course provider's data protection policy.</p><p><a id="policyUrl" target="_blank" href="#">Show policy</a></p></div></div><form id="enrollmentPolicyForm" class="simple_form form-horizontal" action="/enrollments" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" /><input id="courseId" name="course_id" type="hidden" /><div class="row"><div class="col-md-8"><label><input id="policyAccepted" type="checkbox"><span class="ml10">I agree with the data protection policy.</span></input></label></div><div class="col-md-4"><input class="btn btn-primary btn-sm pull-right disabled" id="acceptPolicyBtn" type="submit" value="Enroll me for this course" /></div></div></form></div></div></div></div><script type="text/javascript">(function() {
+  $('#enrollmentPolicyModal').on('show.bs.modal', function(event) {
+    var button, courseCode, courseTitle, modal, policyUrl;
+    button = $(event.relatedTarget);
+    courseTitle = button.data('course-title');
+    policyUrl = button.data('policy-url');
+    courseCode = button.data('course-code');
+    modal = $(this);
+    modal.find('#courseTitle').text(courseTitle);
+    modal.find('#courseId').val(courseCode);
+    return modal.find('#policyUrl').prop('href', policyUrl);
+  });
+
+  $("#policyAccepted").on("click", function(event) {
+    if ($(this).prop('checked') === true) {
+      return $("#acceptPolicyBtn").removeClass('disabled');
+    } else {
+      return $("#acceptPolicyBtn").addClass('disabled');
+    }
+  });
+
+  $("#acceptPolicyBtn").on("click", function(event) {
+    if ($('#policyAccepted').prop('checked') === true) {
+      $('#enrollmentPolicyForm').submit;
+      return true;
+    } else {
+      return false;
+    }
+  });
+
+}).call(this);
+</script><div class="push"></div></div><div class="footer mt60"><div class="footer-outer"><div class="footer-inner"><div class="container"><div class="row"><div class="menu"><div class="row-fluid"><div class="col-md-6 hidden-print"><h4 class="pt20">More information</h4><div class="footerNav"><ul><li><a href="/pages/about">About Us</a></li><li><a href="/pages/team">Team</a></li><li><a href="/pages/open_source">Open Source</a></li><li><a href="https://blog.openhpi.de/de/">Blog</a></li><li><a href="/feeds">Feeds</a></li><li><a href="/pages/mooc">What is a MOOC?</a></li><li><a href="/pages/document_types">Qualified Certificate</a></li></ul><ul><li><a href="/pages/faq">FAQ</a></li><li><a href="/pages/roa_guidelines">Record of Achievement Guidelines</a></li><li><a href="/pages/honor_code">Code of Honor</a></li><li><a href="/pages/forum_rules">Forum Rules</a></li><li><a href="/pages/p_a">Peer Assessment</a></li></ul></div></div><div class="col-md-6"><h4 class="pt20">About openHPI</h4><p>openHPI is the educational Internet platform of the German Hasso Plattner Institute, Potsdam. On openHPI you take part in a worldwide social learning network based on interactive online courses covering different subjects in Information and Communications Technology (ICT).</p></div><div class="col-md-12"><hr class="divider" /><div class="copyright"><p class="pull-left">&copy; 2012 - 2016 <a href="https://hpi.de/" target="_blank">Hasso Plattner Institute </a>&ndash; <a href="/pages/imprint">Imprint</a> – <a href="/pages/privacy">Data Protection</a></p><p class="pull-right">Powered by<a href="https://www.tele-task.de/" target="_blank">&nbsp;tele-TASK </a>und Xikolo (r4149) </p><div class="clearfix"></div></div></div></div></div></div></div></div></div></div><script type="text/javascript">(function() {
+  $().ready(function() {
+    return $('button[id^="wmd-image-button-text"]').hide();
+  });
+
+}).call(this);
+</script><div class="dimmer"></div><div class="helpdesk-container hidden-print"><div class="js-helpdesk-button helpdesk-button" id="helpdesk-button" style="right: -1px;"><div class="button-label">Helpdesk</div></div><div class="helpdesk-panel" id="helpdesk-panel"><div class="helpdesk-box1" id="helpdesk-ajax-container"></div><div class="helpdesk-box2"><p class="helpdesk-success-message">Your request has been sent to our support team, and will be answered as soon as possible.<br /><br />Thank You!</p></div><div class="helpdesk-box3"><p class="helpdesk-fail-message">Oops something went wrong.</p><div class="issue-back-button helpdesk-btn" id="issue-back-button" style="float: none; width: 50px;">Back</div></div></div></div><script type="text/javascript">try {
+  var _paq = _paq || [];
+  (function () {
+    var u = (("https:" == document.location.protocol) ? "https://open.hpi.de/piwik/" : "http://open.hpi.de/piwik/");
+    _paq.push(['setSiteId', 1]);
+    _paq.push(['setTrackerUrl', u + 'piwik.php']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript';
+    g.defer = true;
+    g.async = true;
+    g.src = u + 'piwik.js';
+    s.parentNode.insertBefore(g, s);
+  })();
+
+} catch( err ) {}</script><noscript><p><img alt="" src="https://open.hpi.de/piwik/piwik.php?idsite=1" style="border:0" /></p></noscript><div class="has-spinner loading" id="loading-dimmer"><div id="loading-dimmer-innerwrapper"><div class="loading-animation"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div></div></div></body></html>
