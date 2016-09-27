@@ -37,5 +37,4 @@ class LeitfadenFisi {
         }
         return $ausgabe;
     }
-
 }
